@@ -1,5 +1,7 @@
 # Lingua Franca Project
 
+From Codecademy's [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
+
 ## Instructions
 
 1. Delete the blank.txt file inside of lingua-franca. You don't need it, but GitHub doesn't like empty folders.
