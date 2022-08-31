@@ -1,4 +1,5 @@
 #!/bin/bash
+# From Codecademy's "Learn the Command Line" course, in the "Configuring the Environment" section, offline project
 # Don't forget to run "chmod +x script.sh" to give the script permissions
 
 # Group 1: Navigating the File System
