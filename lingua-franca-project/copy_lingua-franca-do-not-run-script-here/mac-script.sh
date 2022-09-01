@@ -141,7 +141,7 @@ read -r fileReset
 
 if [ "$fileReset" -eq 1 ]
 then
-    rm -r /world
+    rm -r ../lingua-franca/world
     cp -R ../copy_lingua-franca-do-not-run-script-here/* ../lingua-franca
 else
     echo "Cool. See you later."
