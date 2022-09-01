@@ -135,3 +135,13 @@ echo -e '\033[1mGroup 4: Configuring the Environment\033[0m'
 
 # Yeah, I've already configured my environment how I like it, so I'm not messing with my source file...good luck!
 echo "  You're on your own here, Padawan."
+
+echo "Would you like to reset the file structure? (enter '1' for yes, '0' for no)"
+read -r fileReset
+
+if [ "$fileReset" -eq 1 ]
+then
+        cp -R ../copy_lingua-franca-do-not-run-script-here/* ../lingua-franca
+else
+    echo "Cool. See you later."
+fi
