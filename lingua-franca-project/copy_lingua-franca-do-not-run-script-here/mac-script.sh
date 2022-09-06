@@ -6,7 +6,7 @@
 echo -e '\033[1mGroup 1: Navigating the File System\033[0m' 
 echo ""
 
-#1 - Navigate to project directory
+#1
 echo "  Step 1: Navigate to project directory"
 echo ""
 #2
