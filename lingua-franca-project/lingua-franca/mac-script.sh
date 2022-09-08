@@ -6,7 +6,7 @@
 echo -e '\033[1mGroup 1: Navigating the File System\033[0m' 
 echo ""
 
-#1 - Navigate to project directory
+#1
 echo "  Step 1: Navigate to project directory"
 echo ""
 #2
@@ -107,12 +107,12 @@ echo "cat todo/empty_files.txt"
 cat todo/empty_files.txt
 echo ""
 #16
-echo "Step 16: Find and replace all misspelled names in all files"
-echo "sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt"
-sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt 
-
+echo "  Step 16: Find and replace all misspelled names in all files"
+echo "sed -i '' 's/Lingua-Franca/Lingua Franca/g' */*.txt"
+sed -i '' 's/Lingua-Franca/Lingua Franca/g' */*.txt 
     # sed - find and substitute command
         # -i option means to change in place (rather than in a temp file)
+        # Mac is weird sometimes and requires an empty string following the -i option
         # g to replace all instances, not just the first one
         # (*/*.txt) to search all subdirectories and files 
 echo "grep -Rl 'Lingua-Franca' */*.txt | wc -l"
@@ -127,7 +127,8 @@ grep -Rl 'Lingua-Franca' */*.txt | wc -l
  # Something to note:
  # wc first and piped to grep shows all matches to wc result, so output is names of all matching files
  # grep first and piped to wc shows the number of matches, so output is a number
-
+echo ""
+echo ""
 
 # Group 4: Configuring the Environment
 echo -e '\033[1mGroup 4: Configuring the Environment\033[0m'
@@ -140,8 +141,10 @@ read -r fileReset
 
 if [ "$fileReset" -eq 1 ]
 then
-    rm -r ../lingua-franca/world
+    GLOBIGNORE="*.sh" # The script will now ignore any files that match this pattern
+    rm -R ./*
     cp -R ../copy_lingua-franca-do-not-run-script-here/* ../lingua-franca
+    unset GLOBIGNORE # The script will no longer ignore any files that match this pattern
 else
     echo "Cool. See you later."
 fi
