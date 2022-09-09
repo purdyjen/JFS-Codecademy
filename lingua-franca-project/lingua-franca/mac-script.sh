@@ -1,6 +1,9 @@
 #!/bin/bash
 # From Codecademy's "Learn the Command Line" course, in the "Configuring the Environment" section, offline project
-# Don't forget to run "chmod +x script.sh" to give the script permissions
+# Don't forget to run "chmod +x mac-script.sh" to give the script permissions
+
+chmod +x reset.sh
+./reset.sh
 
 # Group 1: Navigating the File System
 echo -e '\033[1mGroup 1: Navigating the File System\033[0m' 
@@ -99,7 +102,7 @@ echo ""
 echo "  Step 14: Find and list all files that have no content into a file"
 echo "wc -l */*.txt | grep 0 > todo/empty_files.txt"
 wc -l */*.txt | grep 0 > todo/empty_files.txt
-    # wc -l option for number of lines...piped to grep command to search for all files that have a wc -l result of 0...redirected into a new .txt file
+    printf "# wc -l option for number of lines...piped to grep command to search for all files that have a wc -l result of 0...redirected into a new .txt file\n"
 echo ""
 #15
 echo "  Step 15: Display content of the new file"
@@ -110,23 +113,29 @@ echo ""
 echo "  Step 16: Find and replace all misspelled names in all files"
 echo "sed -i '' 's/Lingua-Franca/Lingua Franca/g' */*.txt"
 sed -i '' 's/Lingua-Franca/Lingua Franca/g' */*.txt 
-    # sed - find and substitute command
-        # -i option means to change in place (rather than in a temp file)
-        # Mac is weird sometimes and requires an empty string following the -i option
-        # g to replace all instances, not just the first one
-        # (*/*.txt) to search all subdirectories and files 
+
+    printf "    # sed - find and substitute command
+            # -i option means to change in place (rather than in a temp file)
+            # Mac is weird sometimes and requires an empty string following the -i option
+            # g to replace all instances, not just the first one
+            # (*/*.txt) to search all subdirectories and files \n"
+
 echo "grep -Rl 'Lingua-Franca' */*.txt | wc -l"
 grep -Rl 'Lingua-Franca' */*.txt | wc -l 
-    # grep command
-        # -Rl, -R and -l options combined) 
-            # (-R) Recursive search for files
-            # (-l) No lines 
-        # searching for 'Lingua-Franca' in all subdirectories and files 
-        # piped to wc command ...should print 0
 
- # Something to note:
- # wc first and piped to grep shows all matches to wc result, so output is names of all matching files
- # grep first and piped to wc shows the number of matches, so output is a number
+    printf "  # grep command
+      # -Rl, -R and -l options combined)
+             # (-R) Recursive search for files
+             # (-l) No lines
+         # searching for 'Lingua-Franca' in all subdirectories and files
+         # piped to wc command ...should print 0\n
+
+    # Something to note:
+       # wc first and piped to grep shows all matches to wc result, 
+         so output is names of all matching files
+       # grep first and piped to wc shows the number of matches, 
+         so output is a number"
+
 echo ""
 echo ""
 
@@ -135,16 +144,3 @@ echo -e '\033[1mGroup 4: Configuring the Environment\033[0m'
 
 # Yeah, I've already configured my environment how I like it, so I'm not messing with my source file...good luck!
 echo "  You're on your own here, Padawan."
-
-echo "Would you like to reset the file structure? (enter '1' for yes, '0' for no)"
-read -r fileReset
-
-if [ "$fileReset" -eq 1 ]
-then
-    GLOBIGNORE="*.sh" # The script will now ignore any files that match this pattern
-    rm -R ./*
-    cp -R ../copy_lingua-franca-do-not-run-script-here/* ../lingua-franca
-    unset GLOBIGNORE # The script will no longer ignore any files that match this pattern
-else
-    echo "Cool. See you later."
-fi
