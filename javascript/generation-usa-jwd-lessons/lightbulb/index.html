@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbulb</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Turn the light on or off by clicking on the bulb.</h1>
+
+    <img onclick="bulbSwitch()" src="lightoff.jpg" alt="lightbulb turned off" id="lightbulb" width="350" height="470" style="margin-left:320px;margin-top:50px;">
+
+    <script>
+        function bulbSwitch() {
+            var bulb = document.getElementById("lightbulb");
+            if (bulb.src.match('lighton.jpg')) {
+                bulb.src = "lightoff.jpg";
+            } else {
+                bulb.src = "lighton.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
