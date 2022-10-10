@@ -58,3 +58,20 @@ If you want extra practice:
 
 - If you started with a `switch` statement, convert it to `if`/`else if`/`else` statements.
 - If you started with `if`/`else if`/`else` statements, convert them to a `switch` statement.
+
+### Challenge #1: User Input
+
+Bust out your Google Fu skills to figure out how you can make this script truly interactive by getting user input. Refactor your code.
+
+_The solution to this challenge is available in the `magic-8-ball-prompt.js` file, but **try** not to peek at it._
+
+#### Challenge #2: Run JavaScript in your Terminal
+
+##### Install and use node.js to run JavaScript in Terminal
+
+1. If you don't already have node installed, download and install from [here](https://nodejs.org/en/download/).
+2. In your terminal, navigate to the folder containing your project.
+3. Run `npm init -y`. This initializes the directory so that it can run node. The `-y` flag allows you to skip the package.json setup.
+   _Note: `npm` stands for node package manager. There are thousands of packages at [npmjs.com](https://www.npmjs.com/) that you can import to streamline your development by simply running `npm install [name-of-package]`._
+4. Because this project requires user input for extra functionality, you need to download a package that enables you to do so. Run `npm install prompt-sync`.
+5. Finally, include this line of code at the top of your .js file: `const prompt = require("prompt-sync")();`
