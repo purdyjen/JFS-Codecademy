@@ -1,5 +1,7 @@
-(From Codecademy's "Learn JavaScript" course, Introduction Unit:
-https://www.codecademy.com/courses/introduction-to-javascript)
+# Variables Lesson
+
+Source:
+From Codecademy's [Learn JavaScript](https://www.codecademy.com/courses/introduction-to-javascript) course, Introduction Unit:
 
 # Variables
 
