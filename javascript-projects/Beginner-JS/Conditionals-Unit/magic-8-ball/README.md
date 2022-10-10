@@ -65,7 +65,7 @@ Bust out your Google Fu skills to figure out how you can make this script truly 
 
 _The solution to this challenge is available in the `magic-8-ball-prompt.js` file, but **try** not to peek at it._
 
-#### Challenge #2: Run JavaScript in your Terminal
+### Challenge #2: Run JavaScript in your Terminal
 
 ##### Install and use node.js to run JavaScript in Terminal
 
