@@ -3,7 +3,7 @@ https://www.codecademy.com/courses/introduction-to-javascript)
 
 # Variables
 
-![Variables](/images/containers.png)
+![Variables](Lesson/images/containers.png)
 In programming, a variable is a container for a value. You can think of variables as little containers for information that live in a computer’s memory. Information stored in variables, such as a username, account number, or even personalized greeting can then be found in memory.
 
 Variables also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves.
