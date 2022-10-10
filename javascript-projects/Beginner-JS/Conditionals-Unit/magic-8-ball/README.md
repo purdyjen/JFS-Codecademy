@@ -41,7 +41,7 @@ Finally, to ensure we only have whole numbers from `0` to `7` we can round down 
 
 - 'It is certain'
 - 'It is decidedly so'
-- - 'Reply hazy try again'
+- 'Reply hazy try again'
 - 'Cannot predict now'
 - 'Do not count on it'
 - 'My sources say no'
@@ -59,13 +59,13 @@ If you want extra practice:
 - If you started with a `switch` statement, convert it to `if`/`else if`/`else` statements.
 - If you started with `if`/`else if`/`else` statements, convert them to a `switch` statement.
 
-### Challenge #1: User Input
+### Optional Challenge #1: User Input
 
 Bust out your Google Fu skills to figure out how you can make this script truly interactive by getting user input. Refactor your code.
 
 _The solution to this challenge is available in the `magic-8-ball-prompt.js` file, but **try** not to peek at it._
 
-### Challenge #2: Run JavaScript in your Terminal
+### Optional Challenge #2: Run JavaScript in your Terminal
 
 ##### Install and use node.js to run JavaScript in Terminal
 
