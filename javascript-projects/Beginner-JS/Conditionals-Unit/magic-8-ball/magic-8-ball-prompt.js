@@ -5,7 +5,7 @@ https://www.codecademy.com/learn/introduction-to-javascript
 
 // Adds prompt functionality for node
 // to install, type "npm install" (if you downloaded the package.json) or "npm install prompt-sync"
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")({ sigint: true });
 
 // defines a variable (userName) and prompts the user for their name
 let userName = prompt("What is your name? ");
