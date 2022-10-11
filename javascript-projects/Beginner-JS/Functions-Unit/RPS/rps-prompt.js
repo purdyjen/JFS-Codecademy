@@ -1,4 +1,3 @@
-
 /*
 Adapted to include node.js/prompt integration from Codecademy's Learn JavaScript course, Functions Unit:
 https://www.codecademy.com/learn/introduction-to-javascript
@@ -22,7 +21,7 @@ Our code will break the game into four parts:
 
 // Adds prompt functionality for node
 // to install, type "npm install" (if you downloaded the package.json) or "npm -i prompt-sync"
-const prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")({ sigint: true });
 
 //gets the user choice and verifies that the input is a valid choice
 const getUserChoice = (userInput) => {
@@ -70,7 +69,7 @@ const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return "The game was a draw.";
   }
-  
+
   if (userChoice === "rock") {
     if (computerChoice === "paper") {
       return "The computer wins.";
