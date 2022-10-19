@@ -2,6 +2,7 @@ node_modules
 react-main
 .vscode
 .env
+.markdownlint.jsonc
 
 codecademy/learn-build-tools/parcel
 
