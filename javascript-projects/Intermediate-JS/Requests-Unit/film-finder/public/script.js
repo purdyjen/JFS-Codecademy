@@ -3,12 +3,12 @@
 https://www.codecademy.com/learn/learn-intermediate-javascript 
 */
 
-const tmdbKey = '';
-const tmdbBaseUrl = 'https://api.themoviedb.org/3';
-const playBtn = document.getElementById('playBtn');
+const tmdbKey = ".env";
+const tmdbBaseUrl = "https://api.themoviedb.org/3";
+const playBtn = document.getElementById("playBtn");
 
 const getGenres = async () => {
-  const genreRequestEndpoint = '/genre/movie/list';
+  const genreRequestEndpoint = "/genre/movie/list";
   const requestParams = `?api_key=${tmdbKey}`;
   const urlToFetch = `${tmdbBaseUrl}${genreRequestEndpoint}${requestParams}`;
 
@@ -20,16 +20,22 @@ const getGenres = async () => {
       // console.log(genres);
       return genres;
     }
-
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+}
+
 const getMovies = async () => {
+  const rand = getRandomIntInclusive(1, 1000);
   const selectedGenre = getSelectedGenre();
-  const discoverMovieEndpoint = '/discover/movie'
-  const requestParams = `?api_key=${tmdbKey}&with_genres${selectedGenre}`;
+  const discoverMovieEndpoint = "/discover/movie";
+  const requestParams = `?api_key=${tmdbKey}&with_genres${selectedGenre}&page${rand}`;
   const urlToFetch = `${tmdbBaseUrl}${discoverMovieEndpoint}${requestParams}`;
 
   try {
@@ -40,10 +46,9 @@ const getMovies = async () => {
       const movies = jsonResponse.results;
       return movies;
     }
-
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 
 const getMovieInfo = async (movie) => {
@@ -62,16 +67,16 @@ const getMovieInfo = async (movie) => {
     }
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
 const showRandomMovie = async () => {
-  const movieInfo = document.getElementById('movieInfo');
+  const movieInfo = document.getElementById("movieInfo");
   if (movieInfo.childNodes.length > 0) {
     clearCurrentMovie();
-  };
-  
+  }
+
   const movies = await getMovies();
   const randomMovie = await getRandomMovie(movies);
   const info = await getMovieInfo(randomMovie);

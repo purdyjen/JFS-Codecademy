@@ -2,7 +2,6 @@
  From Codecademy's Learn Intermediate Javascript, Requests Unit:
 https://www.codecademy.com/learn/learn-intermediate-javascript 
 */
-
 body {
     background-color: #7f0920;
     color: #0a0408;
@@ -16,7 +15,8 @@ body {
     font-size: 80px;
 }
 
-#genreForm, #playBtn {
+#genreForm,
+#playBtn {
     text-align: center;
     margin: 0px auto;
     display: block;
@@ -24,26 +24,27 @@ body {
 }
 
 #movieInfo {
-    width:  65%;
-    margin:  32px auto;
+    width: 65%;
+    margin: 32px auto;
 }
 
 #movieInfo:after {
-    content:  "";
-    display:  table;
-    clear:  both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-#moviePoster, #movieText {
-    width:  50%;
-    float:  left;
+#moviePoster,
+#movieText {
+    width: 50%;
+    float: left;
 }
 
 img#moviePoster {
-    width:  100%;
-    height:  auto;
-    display:  block;
-    margin:  auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 #movieText {
@@ -52,8 +53,9 @@ img#moviePoster {
     line-height: 1.25;
 }
 
-#movieTitle, #movieOverview {
-    padding:  32px;
+#movieTitle,
+#movieOverview {
+    padding: 32px;
 }
 
 #playBtn {
@@ -64,7 +66,7 @@ img#moviePoster {
     border-style: none;
     background-color: #B97828;
     color: #fdc238;
-    cursor:  pointer;
+    cursor: pointer;
 }
 
 label {
@@ -80,15 +82,16 @@ select {
 
 #likeOrDislikeBtns {
     text-align: center;
-    margin: 0px auto;  
+    margin: 0px auto;
 }
 
-#likeBtn, #dislikeBtn {
+#likeBtn,
+#dislikeBtn {
     padding: 15px 25px;
     font-size: 25px;
     border-radius: 12px;
     border-style: none;
-    cursor:  pointer;
+    cursor: pointer;
 }
 
 #likeBtn {
