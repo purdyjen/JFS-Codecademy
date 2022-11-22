@@ -1,4 +1,4 @@
-package StringMethods.DNAProject;
+package StringMethods;
 
 // This program determines whether or not there is a protein within a strand of DNA
 public class DNA {
